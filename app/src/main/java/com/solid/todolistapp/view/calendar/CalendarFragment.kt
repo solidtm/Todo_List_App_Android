@@ -1,4 +1,4 @@
-package com.solid.todolistapp.ui.dashboard
+package com.solid.todolistapp.view.calendar
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,10 +8,11 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.solid.todolistapp.databinding.FragmentDashboardBinding
+import com.solid.todolistapp.viewmodel.calendar.CalendarViewModel
 
-class DashboardFragment : Fragment() {
+class CalendarFragment : Fragment() {
 
-    private lateinit var dashboardViewModel: DashboardViewModel
+    private lateinit var calendarViewModel: CalendarViewModel
     private var _binding: FragmentDashboardBinding? = null
 
     // This property is only valid between onCreateView and
@@ -23,14 +24,14 @@ class DashboardFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        dashboardViewModel =
-            ViewModelProvider(this)[DashboardViewModel::class.java]
+        calendarViewModel =
+            ViewModelProvider(this)[CalendarViewModel::class.java]
 
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textDashboard
-        dashboardViewModel.text.observe(viewLifecycleOwner, {
+        calendarViewModel.text.observe(viewLifecycleOwner, {
             textView.text = it
         })
         return root
