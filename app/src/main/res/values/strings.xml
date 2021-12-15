@@ -8,4 +8,12 @@
     <string name="alarms">Alarms</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="time_textview_string">Today, 24th Feb, Wed</string>
+    <string name="let_s_be_productive_today">Let\'s be productive today</string>
+    <string name="greetings_text">Hello John!</string>
+    <string name="todo_text_string">Create Wireframes</string>
+    <string name="time_stamp_text">10:00 P.M.</string>
+    <string name="priority_string">High</string>
+    <string name="category">Work</string>
+    <string name="checkbox_text">Create Wireframes</string>
 </resources>
