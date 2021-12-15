@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Todo List App</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="list">List</string>
+    <string name="grid">Grid</string>
+    <string name="alarms">Alarms</string>
+</resources>

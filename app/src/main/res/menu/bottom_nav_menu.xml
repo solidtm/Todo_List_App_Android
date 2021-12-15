@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    Home navigation icon-->
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/title_home" />
+
+<!--    alarm navigation icon-->
+    <item
+        android:id="@+id/navigation_alarm"
+        android:icon="@drawable/ic_bell"
+        android:title="@string/alarms" />
+
+<!--    list navigation icon-->
+    <item
+        android:id="@+id/navigation_list"
+        android:icon="@drawable/ic_list"
+        android:title="@string/list" />
+
+<!--    grid navigation item-->
+    <item
+        android:id="@+id/navigation_grid"
+        android:icon="@drawable/ic_grid"
+        android:title="@string/grid" />
+
+</menu>
