@@ -165,8 +165,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:backgroundTint="@color/checked"
+                android:backgroundTint="@color/category"
                 android:text="@string/register"
+                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="@+id/user_password"
                 app:layout_constraintStart_toStartOf="@+id/user_password"
                 app:layout_constraintTop_toBottomOf="@+id/user_password" />
@@ -223,7 +224,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/sign_in"
-                    android:textColor="@color/checked"
+                    android:textColor="@color/primaryDarkColor"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
