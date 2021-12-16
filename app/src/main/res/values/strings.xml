@@ -6,7 +6,6 @@
     <string name="list">List</string>
     <string name="grid">Grid</string>
     <string name="alarms">Alarms</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="time_textview_string">Today, 24th Feb, Wed</string>
     <string name="let_s_be_productive_today">Let\'s be productive today</string>
@@ -24,9 +23,26 @@
     <string name="date">Date</string>
     <string name="task_description">Task description</string>
     <string name="task_name">Task name</string>
-    <string name="category_sttring">Category</string>
+    <string name="category_string">Category</string>
     <string name="school">School</string>
     <string name="family">Family</string>
     <string name="high">High</string>
     <string name="remind_me">Remind Me</string>
+    <string name="splash_screen_title">Todo You</string>
+    <string name="login">Login</string>
+    <string name="title_register">Register</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="sign_up_with_google">Sign Up with Google</string>
+    <string name="email_address">Email Address</string>
+    <string name="full_name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="please_register_to_create_account">Please register to create account</string>
+    <string name="todo_you">Todo You</string>
+    <string name="or">or</string>
+    <string name="sign_in">Sign In</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="sign_in_to_continue">Sign in to continue</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
 </resources>

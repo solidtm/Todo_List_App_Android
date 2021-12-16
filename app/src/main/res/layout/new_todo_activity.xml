@@ -48,7 +48,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="414dp"
         android:layout_height="598dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -87,7 +87,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="16dp"
-                    android:text="@string/category_sttring"
+                    android:text="@string/category_string"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -321,5 +321,5 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
