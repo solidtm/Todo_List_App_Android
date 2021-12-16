@@ -1,15 +1,13 @@
 package com.solid.todolistapp.view.home
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.solid.todolistapp.R
 import com.solid.todolistapp.databinding.FragmentHomeBinding
+import com.solid.todolistapp.model.Todo
+import com.solid.todolistapp.view.todo.adapter.TodoAdapter
 import com.solid.todolistapp.viewmodel.home.HomeViewModel
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
@@ -28,9 +26,27 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         _binding = FragmentHomeBinding.bind(view)
 
-
+        initAdapter()
 
     }
+
+    private fun initAdapter() {
+
+        val todoList = listOf(
+            Todo("Create wireframes", "Work", "High", "10:00PM", false),
+            Todo("Test Prototypes", "Work", "High", "2:00PM", false),
+            Todo("Call Mum", "Family", "Low", "6:00PM", false),
+            Todo("Study Mathematics", "School", "Medium", "4:00PM", true),
+            Todo("Dinner with Pedro", "Family", "Low", "8:00PM", true))
+
+        val todoAdapter = TodoAdapter(todoList)
+
+        binding.todoListRv.also {
+            it.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+            it.adapter = todoAdapter
+        }
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

@@ -2,6 +2,7 @@ package com.solid.todolistapp.view.todo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Window
 import com.solid.todolistapp.R
 import com.solid.todolistapp.databinding.ActivityStarterBinding
 import com.solid.todolistapp.databinding.NewTodoActivityBinding
@@ -14,7 +15,10 @@ class NewTodoActivity : AppCompatActivity() {
 
 
         binding= NewTodoActivityBinding.inflate(layoutInflater)
+        supportActionBar?.hide()
         setContentView(binding.root)
+
+
 
     }
 }

@@ -2,6 +2,7 @@ package com.solid.todolistapp.view.login.startup
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Window
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.solid.todolistapp.R
@@ -12,6 +13,8 @@ class StarterActivity : AppCompatActivity() {
     lateinit var navController: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        supportActionBar?.hide()
 
         binding= ActivityStarterBinding.inflate(layoutInflater)
         setContentView(binding.root)
