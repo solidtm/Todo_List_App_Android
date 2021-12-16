@@ -18,10 +18,10 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menu_img_view" />
+        app:layout_constraintTop_toBottomOf="@+id/search_img_view" />
 
     <ImageView
-        android:id="@+id/menu_img_view"
+        android:id="@+id/search_img_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
@@ -33,7 +33,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/back_img_view"
+        android:id="@+id/profile_img_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
@@ -42,7 +42,7 @@
         android:layout_weight="1"
         android:src="@drawable/ic_back_arrow"
         app:layout_constraintBottom_toTopOf="@+id/greeting_text"
-        app:layout_constraintEnd_toStartOf="@+id/menu_img_view"
+        app:layout_constraintEnd_toStartOf="@+id/search_img_view"
         app:layout_constraintHorizontal_bias="0.058"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -100,7 +100,7 @@
                     android:id="@+id/remind_me_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="44dp"
+                    android:layout_marginTop="54dp"
                     android:text="@string/remind_me"
                     android:textColor="@color/black"
                     android:textSize="18sp"
@@ -163,8 +163,8 @@
                     android:id="@+id/remind_me_toggle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="60dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="72dp"
+                    android:layout_marginTop="16dp"
                     android:orientation="horizontal"
                     android:scaleX="1.5"
                     android:scaleY="1.5"

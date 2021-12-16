@@ -33,7 +33,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView_sign_in"
+                android:id="@+id/label_register"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
@@ -55,7 +55,7 @@
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="@+id/regLogoText"
                 app:layout_constraintStart_toStartOf="@+id/regLogoText"
-                app:layout_constraintTop_toBottomOf="@+id/textView_sign_in" />
+                app:layout_constraintTop_toBottomOf="@+id/label_register" />
 
             <TextView
                 android:id="@+id/label_name"
@@ -174,7 +174,7 @@
 
 
             <Button
-                android:id="@+id/button_member"
+                android:id="@+id/button_google"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -220,7 +220,7 @@
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/textView_signin"
+                    android:id="@+id/textView_sign_in"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/sign_in"

@@ -49,7 +49,7 @@
         app:layout_constraintBottom_toTopOf="@+id/greeting_text2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menu_img_view" />
+        app:layout_constraintTop_toBottomOf="@+id/search_img_view" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/todo_list_rv"
@@ -64,7 +64,7 @@
         tools:listitem="@layout/todo_list_rv_content" />
 
     <ImageView
-        android:id="@+id/menu_img_view"
+        android:id="@+id/search_img_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
@@ -76,7 +76,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/back_img_view"
+        android:id="@+id/profile_img_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
@@ -85,7 +85,7 @@
         android:layout_weight="1"
         android:src="@drawable/ic_bell"
         app:layout_constraintBottom_toTopOf="@+id/greeting_text"
-        app:layout_constraintEnd_toStartOf="@+id/menu_img_view"
+        app:layout_constraintEnd_toStartOf="@+id/search_img_view"
         app:layout_constraintHorizontal_bias="0.073"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

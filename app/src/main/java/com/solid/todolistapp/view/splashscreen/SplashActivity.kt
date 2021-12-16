@@ -1,6 +1,8 @@
 package com.solid.todolistapp.view.splashscreen
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -13,14 +15,23 @@ import android.view.animation.AnimationUtils
 import com.solid.todolistapp.MainActivity
 import com.solid.todolistapp.R
 import com.solid.todolistapp.databinding.ActivitySplashBinding
+import com.solid.todolistapp.view.login.startup.StarterActivity
 
 class SplashActivity : AppCompatActivity() {
+    private val SHOW_SPLASH = "show times"
+    private val SPLASH_VALUE = "splash is shown"
+    private var splashIsShown = false
+    private var showTime = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
         //        Set up view binding
-        val splashBinding: ActivitySplashBinding = ActivitySplashBinding.inflate(layoutInflater)
+        val splashBinding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(splashBinding.root)
+
+        val sharedPref = this.getPreferences(Context.MODE_PRIVATE)
+        val editor: SharedPreferences.Editor =  sharedPref.edit()
 
 //        Set the splash Activity screen to be full screen to hide status bar.
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.R){
@@ -37,11 +48,22 @@ class SplashActivity : AppCompatActivity() {
         val splashAnimation = AnimationUtils.loadAnimation(this, R.anim.anim_splash)    //Load the splash animation resource
         splashBinding.appName.animation = splashAnimation     //set the text animation
         splashAnimation.setAnimationListener(object: Animation.AnimationListener{
-            override fun onAnimationStart(animation: Animation?) {}    //Do nothing on animation start
-
+            override fun onAnimationStart(animation: Animation?) {    //Do nothing on animation start
+                if (sharedPref.getBoolean(SPLASH_VALUE, false)){
+                    startActivity(Intent(this@SplashActivity, StarterActivity::class.java))
+                    finish()
+                }else{
+                    splashIsShown = true
+                }
+            }
             override fun onAnimationEnd(animation: Animation?) {  //Move to the next screen on end of animation after 1s using a Handler & Intent
                 Handler(Looper.getMainLooper()).postDelayed({
-                    startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+                    editor.putInt(SHOW_SPLASH, showTime + 1)
+                    editor.putBoolean(SPLASH_VALUE, splashIsShown)
+                    editor.apply()
+                    val intent = Intent(this@SplashActivity, StarterActivity::class.java)
+                    intent.putExtra("is_from_splash_activity", sharedPref.getInt(SHOW_SPLASH, 0))
+                    startActivity(intent)
                     finish()
                 }, 1000)
             }

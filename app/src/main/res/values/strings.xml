@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Todo List App</string>
+    <string name="app_name">Todo You</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
@@ -45,4 +45,5 @@
     <string name="already_have_an_account">Already have an account?</string>
     <string name="sign_in_to_continue">Sign in to continue</string>
     <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="saved_show_time">show time</string>
 </resources>

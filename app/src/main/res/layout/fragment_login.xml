@@ -46,7 +46,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/logoText" />
 
             <TextView
-                android:id="@+id/textView_sign_in"
+                android:id="@+id/label_register"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -158,7 +158,7 @@
                 android:textFontWeight="700"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView_sign_in" />
+                app:layout_constraintTop_toBottomOf="@+id/label_register" />
 
             <TextView
                 android:id="@+id/label_email"

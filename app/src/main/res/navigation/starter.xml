@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/starter">
+
+    <fragment
+        android:id="@+id/navigation_register"
+        android:name="com.solid.todolistapp.view.register.RegisterFragment"
+        tools:layout="@layout/fragment_register"
+        android:label="@string/title_register" >
+        <action
+            android:id="@+id/action_navigation_register_to_navigation_login"
+            app:destination="@id/navigation_login" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="com.solid.todolistapp.view.login.LoginFragment"
+        tools:layout="@layout/fragment_login"
+        android:label="@string/login" >
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_register"
+            app:destination="@id/navigation_register" />
+    </fragment>
+</navigation>
