@@ -22,4 +22,8 @@
         android:name="com.solid.todolistapp.view.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+    <fragment android:id="@+id/navigation_todo"
+        android:name="com.solid.todolistapp.view.todo.TodoFragment"
+        android:label="Add Todo"
+        tools:layout="@layout/new_todo_activity"/>
 </navigation>

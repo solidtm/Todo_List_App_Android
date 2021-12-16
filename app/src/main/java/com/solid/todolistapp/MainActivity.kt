@@ -1,5 +1,6 @@
 package com.solid.todolistapp
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +9,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.solid.todolistapp.databinding.ActivityMainBinding
+import com.solid.todolistapp.view.todo.NewTodoActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,5 +33,9 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        binding.fab.setOnClickListener{
+            startActivity(Intent(applicationContext, NewTodoActivity::class.java))
+        }
     }
 }

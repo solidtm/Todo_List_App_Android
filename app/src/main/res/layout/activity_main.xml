@@ -34,7 +34,9 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/app_name"
         android:src="@drawable/ic_add"
+        app:maxImageSize="56dp"
         android:backgroundTint="@color/grey"
+        app:tint="@color/white"
         app:layout_anchor="@id/bottomAppBar" />
 
 
