@@ -11,9 +11,22 @@
     <string name="time_textview_string">Today, 24th Feb, Wed</string>
     <string name="let_s_be_productive_today">Let\'s be productive today</string>
     <string name="greetings_text">Hello John!</string>
+    <string name="create_task">Create new task</string>
     <string name="todo_text_string">Create Wireframes</string>
     <string name="time_stamp_text">10:00 P.M.</string>
     <string name="priority_string">High</string>
     <string name="category">Work</string>
     <string name="checkbox_text">Create Wireframes</string>
+    <string name="priority">Priority</string>
+    <string name="low">Low</string>
+    <string name="medium">Medium</string>
+    <string name="alarm">Alarm</string>
+    <string name="date">Date</string>
+    <string name="task_description">Task description</string>
+    <string name="task_name">Task name</string>
+    <string name="category_sttring">Category</string>
+    <string name="school">School</string>
+    <string name="family">Family</string>
+    <string name="high">High</string>
+    <string name="remind_me">Remind Me</string>
 </resources>

@@ -8,4 +8,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#565656</color>
+    <color name="category">#ffda85</color>
+    <color name="priority">#ff595e</color>
+    <color name="checked">#16DB65</color>
+    <color name="family">#0077b6</color>
+    <color name="family_background">#ade8f4</color>
+    <color name="category_color">#ba1b1d</color>
+    <color name="school_text">#b5179e</color>
+    <color name="school">#ffa7c5</color>
+
 </resources>
