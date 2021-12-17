@@ -21,14 +21,22 @@
     <fragment
         android:id="@+id/navigation_calendar"
         android:name="com.solid.todolistapp.view.fragments.CalendarFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_calendar" />
+        android:label="@string/title_calendar"
+        tools:layout="@layout/fragment_calendar" >
+        <argument
+            android:name="currentTodo"
+            app:argType="com.solid.todolistapp.model.data.Todo" />
+        <action
+            android:id="@+id/action_navigation_calendar_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.solid.todolistapp.view.fragments.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
     <activity android:id="@+id/navigation_todo"
         android:name="com.solid.todolistapp.view.activities.todo.NewTodoActivity"
         android:label="Add Todo"

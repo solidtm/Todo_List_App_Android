@@ -1,40 +1,55 @@
 package com.solid.todolistapp.view.fragments
 
 import android.os.Bundle
-import android.view.LayoutInflater
+import android.text.TextUtils
 import android.view.View
-import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.navArgs
 import com.solid.todolistapp.databinding.FragmentCalendarBinding
+import com.solid.todolistapp.model.TodoViewModel
 import com.solid.todolistapp.viewmodel.calendar.CalendarViewModel
 
 class CalendarFragment : Fragment() {
 
-    private lateinit var calendarViewModel: CalendarViewModel
+    private val args by navArgs<CalendarFragmentArgs>()
+    private lateinit var todoViewModel: TodoViewModel
     private var _binding: FragmentCalendarBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        calendarViewModel =
-            ViewModelProvider(this)[CalendarViewModel::class.java]
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        _binding = FragmentCalendarBinding.bind(view)
 
-        _binding = FragmentCalendarBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        todoViewModel = ViewModelProvider(this).get(TodoViewModel::class.java)
 
-        val textView: TextView = binding.textDashboard
-        calendarViewModel.text.observe(viewLifecycleOwner, {
-            textView.text = it
-        })
-        return root
+        binding.taskName.setText(args.currentTodo.taskName)
+        binding.categoryText.text = args.currentTodo.category
+        binding.priorityText.text = args.currentTodo.priority
+        binding.alarmText.text = args.currentTodo.timeStamp
+        val priorityCardColor = args.currentTodo.categoryCardColor
+        val categoryCardColor = args.currentTodo.priorityCardColor
+
+        binding.updateButton.setOnClickListener{
+//            Create Updated todo
+        }
+    }
+
+    private fun updateTodo(){
+        val taskName = binding.taskName.text.toString()
+        val categoryText = binding.categoryText.text.toString()
+        val priorityText = binding.priorityText.text.toString()
+        val alarmText = binding.alarmText.text.toString()
+
+        if (inputCheck(taskName, categoryText, priorityText, alarmText)){
+
+        }
+    }
+
+    private fun inputCheck(taskName: String, categoryText: String, priorityText: String, alarmText: String): Boolean {
+        return !(TextUtils.isEmpty(taskName) && TextUtils.isEmpty(categoryText) && TextUtils.isEmpty(priorityText) && TextUtils.isEmpty(alarmText))
     }
 
     override fun onDestroyView() {
