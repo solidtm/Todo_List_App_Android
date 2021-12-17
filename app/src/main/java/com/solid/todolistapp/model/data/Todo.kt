@@ -1,4 +1,4 @@
-package com.solid.todolistapp.model
+package com.solid.todolistapp.model.data
 
 data class Todo (
     val taskName: String,

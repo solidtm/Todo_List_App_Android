@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Fab_Bottom_app_bar">
         <activity
-            android:name=".view.login.startup.StarterActivity"
+            android:name=".view.activities.StarterActivity"
             android:exported="true" />
         <activity
-            android:name=".view.splashscreen.SplashActivity"
+            android:name=".view.activities.SplashActivity"
             android:exported="true"
             android:theme="@style/Theme.Fab_Bottom_app_bar.NoActionBar">
             <intent-filter>
@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.todo.NewTodoActivity"
+            android:name="com.solid.todolistapp.view.activities.todo.NewTodoActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

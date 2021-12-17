@@ -1,4 +1,4 @@
-package com.solid.todolistapp.view.login
+package com.solid.todolistapp.view.fragments
 
 import android.content.Intent
 import android.os.Bundle

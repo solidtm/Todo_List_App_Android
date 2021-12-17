@@ -1,4 +1,4 @@
-package com.solid.todolistapp.view.calendar
+package com.solid.todolistapp.view.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

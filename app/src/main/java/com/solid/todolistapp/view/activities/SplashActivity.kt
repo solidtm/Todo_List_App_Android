@@ -1,4 +1,4 @@
-package com.solid.todolistapp.view.splashscreen
+package com.solid.todolistapp.view.activities
 
 import android.content.Context
 import android.content.Intent
@@ -12,10 +12,8 @@ import android.view.WindowInsets
 import android.view.WindowManager
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import com.solid.todolistapp.MainActivity
 import com.solid.todolistapp.R
 import com.solid.todolistapp.databinding.ActivitySplashBinding
-import com.solid.todolistapp.view.login.startup.StarterActivity
 
 class SplashActivity : AppCompatActivity() {
     private val SHOW_SPLASH = "show times"

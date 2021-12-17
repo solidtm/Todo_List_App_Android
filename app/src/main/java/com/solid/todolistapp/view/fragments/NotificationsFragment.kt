@@ -1,4 +1,4 @@
-package com.solid.todolistapp.view.notifications
+package com.solid.todolistapp.view.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

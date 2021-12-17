@@ -1,10 +1,10 @@
-package com.solid.todolistapp.view.todo.adapter
+package com.solid.todolistapp.view.activities.todo.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.solid.todolistapp.databinding.TodoListRvContentBinding
-import com.solid.todolistapp.model.Todo
+import com.solid.todolistapp.model.data.Todo
 
 
 class TodoAdapter(private val selectedTodoList: List<Todo>): RecyclerView.Adapter<TodoAdapter.TodoViewHolder>() {

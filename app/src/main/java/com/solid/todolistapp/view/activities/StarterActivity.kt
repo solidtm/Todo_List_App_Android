@@ -1,4 +1,4 @@
-package com.solid.todolistapp.view.login.startup
+package com.solid.todolistapp.view.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

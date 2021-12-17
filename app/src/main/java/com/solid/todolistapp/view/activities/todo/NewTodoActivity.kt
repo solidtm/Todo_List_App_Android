@@ -1,10 +1,7 @@
-package com.solid.todolistapp.view.todo
+package com.solid.todolistapp.view.activities.todo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Window
-import com.solid.todolistapp.R
-import com.solid.todolistapp.databinding.ActivityStarterBinding
 import com.solid.todolistapp.databinding.NewTodoActivityBinding
 
 class NewTodoActivity : AppCompatActivity() {

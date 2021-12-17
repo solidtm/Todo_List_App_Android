@@ -1,4 +1,4 @@
-package com.solid.todolistapp.view.home
+package com.solid.todolistapp.view.fragments
 
 import android.os.Bundle
 import android.view.View
@@ -6,8 +6,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.solid.todolistapp.R
 import com.solid.todolistapp.databinding.FragmentHomeBinding
-import com.solid.todolistapp.model.Todo
-import com.solid.todolistapp.view.todo.adapter.TodoAdapter
+import com.solid.todolistapp.model.data.Todo
+import com.solid.todolistapp.view.activities.todo.adapter.TodoAdapter
 import com.solid.todolistapp.viewmodel.home.HomeViewModel
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
@@ -37,7 +37,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             Todo("Test Prototypes", "Work", "High", "2:00PM", false),
             Todo("Call Mum", "Family", "Low", "6:00PM", false),
             Todo("Study Mathematics", "School", "Medium", "4:00PM", true),
-            Todo("Dinner with Pedro", "Family", "Low", "8:00PM", true))
+            Todo("Dinner with Pedro", "Family", "Low", "8:00PM", true)
+        )
 
         val todoAdapter = TodoAdapter(todoList)
 
