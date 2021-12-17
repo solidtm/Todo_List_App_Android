@@ -1,4 +1,4 @@
-package com.solid.todolistapp.model.database
+package com.solid.todolistapp.model.database.user
 
 import androidx.lifecycle.LiveData
 import com.solid.todolistapp.model.data.User

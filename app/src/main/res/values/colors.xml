@@ -9,6 +9,7 @@
     <color name="deepBlack">#FF333333</color>
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#565656</color>
+    <color name="light_grey">#cfcfcf</color>
 
 <!--    <color name="primaryColor">#ade8f4</color>-->
 <!--    <color name="primaryLightColor">#e0ffff</color>-->

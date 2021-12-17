@@ -33,11 +33,11 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private fun initAdapter() {
 
         val todoList = listOf(
-            Todo("Create wireframes", "Work", "High", "10:00PM", false),
-            Todo("Test Prototypes", "Work", "High", "2:00PM", false),
-            Todo("Call Mum", "Family", "Low", "6:00PM", false),
-            Todo("Study Mathematics", "School", "Medium", "4:00PM", true),
-            Todo("Dinner with Pedro", "Family", "Low", "8:00PM", true)
+            Todo(1, "Create wireframes", "Work", "High", "10:00PM", false),
+            Todo(2, "Test Prototypes", "Work", "High", "2:00PM", false),
+            Todo(3, "Call Mum", "Family", "Low", "6:00PM", false),
+            Todo(4, "Study Mathematics", "School", "Medium", "4:00PM", true),
+            Todo(5, "Dinner with Pedro", "Family", "Low", "8:00PM", true)
         )
 
         val todoAdapter = TodoAdapter(todoList)
