@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:id="@+id/row_layout">
 
 
     <androidx.cardview.widget.CardView
@@ -31,14 +32,13 @@
                 android:id="@+id/time_stamp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="4dp"
                 android:text="@string/time_stamp_text"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.783"
+                app:layout_constraintHorizontal_bias="0.85"
                 app:layout_constraintStart_toEndOf="@+id/checkBox" />
 
             <CheckBox
@@ -63,10 +63,10 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/categoryCardView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start|top"
-        android:backgroundTint="@color/category"
         android:translationX="32dp"
         android:translationY="5dp"
         app:cardCornerRadius="5dp"
@@ -90,10 +90,10 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/priorityCardView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|top"
-        android:backgroundTint="@color/priority"
         android:translationX="250dp"
         android:translationY="20dp"
         app:cardCornerRadius="5dp"

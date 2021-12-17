@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 
 class TodoViewModel(application: Application): AndroidViewModel(application) {
 
-    private val readAllData: LiveData<List<Todo>>
+     val readAllData: LiveData<List<Todo>>
     private val repository: TodoRepository
 
     init {
@@ -24,6 +24,18 @@ class TodoViewModel(application: Application): AndroidViewModel(application) {
     fun addTodo(todo: Todo){
         viewModelScope.launch(Dispatchers.IO) {
             repository.addTodo(todo)
+        }
+    }
+
+    fun updateTodo(todo: Todo){
+        viewModelScope.launch (Dispatchers.IO){
+            repository.updateTodo(todo)
+        }
+    }
+
+    fun deleteTodo(todo: Todo){
+        viewModelScope.launch (Dispatchers.IO){
+            repository.deleteTodo(todo)
         }
     }
 }
