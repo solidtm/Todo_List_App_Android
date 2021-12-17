@@ -19,9 +19,6 @@ class TodoAdapter(private val selectedTodoList: List<Todo>): RecyclerView.Adapte
     override fun onBindViewHolder(holder: TodoViewHolder, position: Int) {
         holder.apply {
             bind(selectedTodoList[position])
-            itemView.setOnClickListener{
-//                selectedTodoList[position]
-            }
         }
     }
 
