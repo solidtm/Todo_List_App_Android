@@ -7,7 +7,7 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.solid.todolistapp.R
 import com.solid.todolistapp.databinding.TodoListRvContentBinding
-import com.solid.todolistapp.model.data.Todo
+import com.solid.todolistapp.model.Todo
 import com.solid.todolistapp.view.fragments.HomeFragmentDirections
 
 

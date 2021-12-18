@@ -7,8 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
 import com.solid.todolistapp.databinding.FragmentCalendarBinding
-import com.solid.todolistapp.model.TodoViewModel
-import com.solid.todolistapp.viewmodel.calendar.CalendarViewModel
+import com.solid.todolistapp.viewmodel.TodoViewModel
 
 class CalendarFragment : Fragment() {
 

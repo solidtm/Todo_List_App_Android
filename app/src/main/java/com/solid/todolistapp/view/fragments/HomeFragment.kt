@@ -4,12 +4,11 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.solid.todolistapp.R
 import com.solid.todolistapp.databinding.FragmentHomeBinding
-import com.solid.todolistapp.model.TodoViewModel
-import com.solid.todolistapp.model.UserViewModel
+import com.solid.todolistapp.viewmodel.TodoViewModel
+import com.solid.todolistapp.viewmodel.UserViewModel
 import com.solid.todolistapp.view.activities.todo.adapter.TodoAdapter
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
