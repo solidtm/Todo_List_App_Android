@@ -15,8 +15,6 @@ class CalendarFragment : Fragment() {
     private lateinit var todoViewModel: TodoViewModel
     private var _binding: FragmentCalendarBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -42,9 +40,9 @@ class CalendarFragment : Fragment() {
         val priorityText = binding.priorityText.text.toString()
         val alarmText = binding.alarmText.text.toString()
 
-        if (inputCheck(taskName, categoryText, priorityText, alarmText)){
-
-        }
+//        if (inputCheck(taskName, categoryText, priorityText, alarmText)){
+//
+//        }
     }
 
     private fun inputCheck(taskName: String, categoryText: String, priorityText: String, alarmText: String): Boolean {

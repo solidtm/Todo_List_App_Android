@@ -59,6 +59,7 @@ class SplashActivity : AppCompatActivity() {
                     editor.putInt(SHOW_SPLASH, showTime + 1)
                     editor.putBoolean(SPLASH_VALUE, splashIsShown)
                     editor.apply()
+
                     val intent = Intent(this@SplashActivity, StarterActivity::class.java)
                     intent.putExtra("is_from_splash_activity", sharedPref.getInt(SHOW_SPLASH, 0))
                     startActivity(intent)

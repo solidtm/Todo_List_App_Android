@@ -27,6 +27,7 @@ class StarterActivity : AppCompatActivity() {
 
 //        navGraph.startDestination = R.id.navigation_login
         val countFromSplashActivity = intent.getIntExtra("is_from_splash_activity", 0)
+
         if(countFromSplashActivity > 0) {
             navGraph.startDestination = R.id.navigation_login
         }

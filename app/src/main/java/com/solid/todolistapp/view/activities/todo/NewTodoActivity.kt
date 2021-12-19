@@ -11,7 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.solid.todolistapp.R
 import com.solid.todolistapp.databinding.NewTodoActivityBinding
 import com.solid.todolistapp.viewmodel.TodoViewModel
-import com.solid.todolistapp.model.Todo
+import com.solid.todolistapp.model.data.Todo
 import java.util.*
 
 class NewTodoActivity : AppCompatActivity(), View.OnClickListener {
