@@ -1,11 +1,8 @@
-package com.solid.todolistapp.local.user.dao
+package com.solid.todolistapp.model.data.user.dao
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
-import com.solid.todolistapp.model.User
+import androidx.room.*
+import com.solid.todolistapp.model.data.User
 
 @Dao
 interface UserDao {
@@ -15,6 +12,13 @@ interface UserDao {
 
     @Query("SELECT * FROM user_table ORDER BY id ASC")
     fun readAllData(): LiveData<List<User>>
+
+    @Update
+    fun updateUser(user: User)
+
+    @Delete
+    fun deleteUser(user: User)
+
 
 
 }

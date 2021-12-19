@@ -1,8 +1,8 @@
-package com.solid.todolistapp.local.todo.dao
+package com.solid.todolistapp.model.data.todo.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.solid.todolistapp.model.Todo
+import com.solid.todolistapp.model.data.Todo
 
 @Dao
 interface TodoDao {

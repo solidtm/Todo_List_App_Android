@@ -1,8 +1,8 @@
-package com.solid.todolistapp.local.todo.repository
+package com.solid.todolistapp.model.data.todo.repository
 
 import androidx.lifecycle.LiveData
-import com.solid.todolistapp.model.Todo
-import com.solid.todolistapp.local.todo.dao.TodoDao
+import com.solid.todolistapp.model.data.Todo
+import com.solid.todolistapp.model.data.todo.dao.TodoDao
 
 class TodoRepository(private val todoDao: TodoDao) {
     val readAllData: LiveData<List<Todo>> = todoDao.readAllData()

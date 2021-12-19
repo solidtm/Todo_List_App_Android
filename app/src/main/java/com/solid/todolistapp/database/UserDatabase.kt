@@ -4,10 +4,10 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.solid.todolistapp.local.todo.dao.TodoDao
-import com.solid.todolistapp.local.user.dao.UserDao
-import com.solid.todolistapp.model.Todo
-import com.solid.todolistapp.model.User
+import com.solid.todolistapp.model.data.todo.dao.TodoDao
+import com.solid.todolistapp.model.data.user.dao.UserDao
+import com.solid.todolistapp.model.data.Todo
+import com.solid.todolistapp.model.data.User
 
 @Database(entities = [User::class, Todo::class], version = 1, exportSchema = false)
 abstract class UserDatabase: RoomDatabase() {

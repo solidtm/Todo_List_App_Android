@@ -4,8 +4,8 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
-import com.solid.todolistapp.model.Todo
-import com.solid.todolistapp.local.todo.repository.TodoRepository
+import com.solid.todolistapp.model.data.Todo
+import com.solid.todolistapp.model.data.todo.repository.TodoRepository
 import com.solid.todolistapp.database.UserDatabase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
