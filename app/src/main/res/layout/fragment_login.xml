@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.fragments.LoginFragment">
 
@@ -57,7 +58,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView_sign_in_1" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/layout_user_name"
+                android:id="@+id/layout_user_email"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -83,7 +84,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/layout_user_email"
+                android:id="@+id/layout_user_pass"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -91,8 +92,8 @@
                 android:hint="@string/password"
                 app:boxStrokeColor="@color/checked"
                 app:hintTextColor="@color/checked"
-                app:layout_constraintEnd_toEndOf="@+id/layout_user_name"
-                app:layout_constraintStart_toStartOf="@+id/layout_user_name"
+                app:layout_constraintEnd_toEndOf="@+id/layout_user_email"
+                app:layout_constraintStart_toStartOf="@+id/layout_user_email"
                 app:layout_constraintTop_toBottomOf="@+id/label_email"
                 app:passwordToggleEnabled="true"
                 app:startIconDrawable="@drawable/ic_baseline_lock_24">
@@ -114,10 +115,10 @@
                 android:backgroundTint="@color/category"
                 android:text="@string/sign_in"
                 android:textColor="@color/black"
-                app:layout_constraintEnd_toEndOf="@+id/layout_user_email"
+                app:layout_constraintEnd_toEndOf="@+id/layout_user_pass"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/layout_user_email"
-                app:layout_constraintTop_toBottomOf="@+id/layout_user_email" />
+                app:layout_constraintStart_toStartOf="@+id/layout_user_pass"
+                app:layout_constraintTop_toBottomOf="@+id/layout_user_pass" />
 
             <LinearLayout
                 android:id="@+id/layout_sign_in"

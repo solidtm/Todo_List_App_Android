@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.fragments.RegisterFragment">
 
@@ -79,7 +80,7 @@
                 android:textFontWeight="700"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layout_user_name" />
+                app:layout_constraintTop_toBottomOf="@+id/layout_user_email" />
 
             <TextView
                 android:id="@+id/label_password"
@@ -91,10 +92,10 @@
                 android:textFontWeight="700"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layout_user_email" />
+                app:layout_constraintTop_toBottomOf="@+id/layout_user_pass" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/layout_user_name"
+                android:id="@+id/layout_user_email"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -119,7 +120,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/layout_user_email"
+                android:id="@+id/layout_user_pass"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -127,8 +128,8 @@
                 android:hint="@string/email_address"
                 app:boxStrokeColor="@color/checked"
                 app:hintTextColor="@color/checked"
-                app:layout_constraintEnd_toEndOf="@+id/layout_user_name"
-                app:layout_constraintStart_toStartOf="@+id/layout_user_name"
+                app:layout_constraintEnd_toEndOf="@+id/layout_user_email"
+                app:layout_constraintStart_toStartOf="@+id/layout_user_email"
                 app:layout_constraintTop_toBottomOf="@+id/label_email"
                 app:startIconDrawable="@drawable/ic_baseline_email_24">
 
@@ -149,8 +150,8 @@
                 android:hint="@string/password"
                 app:boxStrokeColor="@color/checked"
                 app:hintTextColor="@color/checked"
-                app:layout_constraintEnd_toEndOf="@+id/layout_user_email"
-                app:layout_constraintStart_toStartOf="@+id/layout_user_email"
+                app:layout_constraintEnd_toEndOf="@+id/layout_user_pass"
+                app:layout_constraintStart_toStartOf="@+id/layout_user_pass"
                 app:layout_constraintTop_toBottomOf="@+id/label_password"
                 app:passwordToggleEnabled="true"
                 app:startIconDrawable="@drawable/ic_baseline_lock_24">
