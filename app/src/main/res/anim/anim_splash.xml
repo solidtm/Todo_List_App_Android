@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android"
     android:fillAfter="true">
-    <!--    This animation will translate the Fav Dish text on the splashscreen from top to middle of screen-->
+    <!--    This animation will translate the Todo You text on the splashscreen from top to middle of the screen-->
     <translate
         android:duration="2000"
         android:fromXDelta="0%p"

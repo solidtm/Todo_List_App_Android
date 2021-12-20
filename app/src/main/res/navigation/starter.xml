@@ -11,7 +11,9 @@
         android:label="@string/title_register" >
         <action
             android:id="@+id/action_navigation_register_to_navigation_login"
-            app:destination="@id/navigation_login" />
+            app:destination="@id/navigation_login"
+            app:popUpTo="@+id/starter"
+            app:popUpToInclusive="true"/>
     </fragment>
     <fragment
         android:id="@+id/navigation_login"
@@ -20,6 +22,8 @@
         android:label="@string/login" >
         <action
             android:id="@+id/action_navigation_login_to_navigation_register"
-            app:destination="@id/navigation_register" />
+            app:destination="@id/navigation_register"
+            app:popUpTo="@+id/starter"
+            app:popUpToInclusive="true"/>
     </fragment>
 </navigation>

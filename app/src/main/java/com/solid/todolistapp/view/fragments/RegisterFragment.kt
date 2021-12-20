@@ -37,6 +37,7 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
 
         binding.textViewSignIn.setOnClickListener{
             findNavController().navigate(R.id.action_navigation_register_to_navigation_login)
+
         }
     }
 
