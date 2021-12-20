@@ -39,6 +39,10 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
             findNavController().navigate(R.id.action_navigation_register_to_navigation_login)
 
         }
+
+        binding.buttonGoogle.setOnClickListener{
+
+        }
     }
 
     private fun insertDataToDatabase() {

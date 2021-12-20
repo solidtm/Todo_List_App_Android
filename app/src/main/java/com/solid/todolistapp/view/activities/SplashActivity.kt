@@ -24,7 +24,7 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-        //        Set up view binding
+//                Set up view binding
         val splashBinding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(splashBinding.root)
 
@@ -45,29 +45,31 @@ class SplashActivity : AppCompatActivity() {
 //        Setup splash Animation using anim resource
         val splashAnimation = AnimationUtils.loadAnimation(this, R.anim.anim_splash)    //Load the splash animation resource
         splashBinding.appName.animation = splashAnimation     //set the text animation
-        splashAnimation.setAnimationListener(object: Animation.AnimationListener{
-            override fun onAnimationStart(animation: Animation?) {    //Do nothing on animation start
-                if (sharedPref.getBoolean(SPLASH_VALUE, false)){
-                    startActivity(Intent(this@SplashActivity, StarterActivity::class.java))
-                    finish()
-                }else{
-                    splashIsShown = true
+
+        if (sharedPref.getBoolean(SPLASH_VALUE, false)){
+            startActivity(Intent(this@SplashActivity, StarterActivity::class.java))
+            finish()
+        }else{
+            splashAnimation.setAnimationListener(object: Animation.AnimationListener{
+                override fun onAnimationStart(animation: Animation?) {}   //Do nothing on animation start
+
+                override fun onAnimationEnd(animation: Animation?) {  //Move to the next screen on end of animation after 1s using a Handler & Intent
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        editor.putInt(SHOW_SPLASH, showTime + 1)
+                        editor.putBoolean(SPLASH_VALUE, splashIsShown)
+                        editor.apply()
+
+                        val intent = Intent(this@SplashActivity, StarterActivity::class.java)
+                        intent.putExtra("is_from_splash_activity", sharedPref.getInt(SHOW_SPLASH, 0))
+                        startActivity(intent)
+                        finish()
+                    }, 1000)
                 }
-            }
-            override fun onAnimationEnd(animation: Animation?) {  //Move to the next screen on end of animation after 1s using a Handler & Intent
-                Handler(Looper.getMainLooper()).postDelayed({
-                    editor.putInt(SHOW_SPLASH, showTime + 1)
-                    editor.putBoolean(SPLASH_VALUE, splashIsShown)
-                    editor.apply()
 
-                    val intent = Intent(this@SplashActivity, StarterActivity::class.java)
-                    intent.putExtra("is_from_splash_activity", sharedPref.getInt(SHOW_SPLASH, 0))
-                    startActivity(intent)
-                    finish()
-                }, 1000)
-            }
+                override fun onAnimationRepeat(animation: Animation?) {}    //Do nothing on animation repeat
+            })
+            splashIsShown = true
+        }
 
-            override fun onAnimationRepeat(animation: Animation?) {}    //Do nothing on animation repeat
-        })
     }
 }

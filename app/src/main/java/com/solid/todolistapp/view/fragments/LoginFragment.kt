@@ -18,6 +18,7 @@ import com.solid.todolistapp.databinding.FragmentLoginBinding
 class LoginFragment : Fragment(R.layout.fragment_login) {
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
+    private val LOGGED = "logged"
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         _binding = FragmentLoginBinding.bind(view)
@@ -53,6 +54,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                 Toast.makeText(requireContext(), "Login successful", Toast.LENGTH_SHORT).show()
                 val intent = Intent(requireContext(), MainActivity::class.java)
                 intent.putExtra("fullName", sharedPref.getString("fullName", ""))
+
                 startActivity(intent)
             }
         }
