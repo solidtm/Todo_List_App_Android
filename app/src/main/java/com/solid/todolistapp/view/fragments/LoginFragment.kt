@@ -34,6 +34,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
     private fun loginUser() {
         val email = binding.email.text.toString()
         val password = binding.password.text.toString()
+
         val sharedPref = requireActivity().getPreferences(Context.MODE_PRIVATE)
         val userEmail = sharedPref.getString("userEmail", "")
         val userPassword = sharedPref.getString("userPassword", "")
@@ -50,7 +51,9 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         }else{
             if (email == userEmail && password == userPassword){
                 Toast.makeText(requireContext(), "Login successful", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(requireContext(), MainActivity::class.java))
+                val intent = Intent(requireContext(), MainActivity::class.java)
+                intent.putExtra("fullName", sharedPref.getString("fullName", ""))
+                startActivity(intent)
             }
         }
     }

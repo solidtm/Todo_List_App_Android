@@ -1,16 +1,14 @@
 package com.solid.todolistapp.view.fragments
 
-import android.content.Context
 import android.os.Bundle
-import android.text.TextUtils
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.solid.todolistapp.R
 import com.solid.todolistapp.databinding.FragmentHomeBinding
 import com.solid.todolistapp.viewmodel.TodoViewModel
-import com.solid.todolistapp.viewmodel.UserViewModel
 import com.solid.todolistapp.view.activities.todo.adapter.TodoAdapter
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
@@ -32,13 +30,15 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             todoAdapter.setData(todo)
         })
 
-        val sharedPref = requireActivity().getPreferences(Context.MODE_PRIVATE)
-        val fullName = sharedPref.getString("fullName", "")
-        val name = TextUtils.substring(fullName, 0, fullName!!.indexOf(" "))
+//        get the fullName from intent
+        val fullName = activity?.intent?.getStringExtra("fullName")
+        var name = ""
+        if (fullName != null){
+            name = fullName.substring(0, fullName.indexOf(" ") + 1)
+        }
+
         binding.greetText.text = String.format("%s", "Hello, $name")
-
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()
