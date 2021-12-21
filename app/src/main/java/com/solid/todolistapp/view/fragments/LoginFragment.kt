@@ -2,6 +2,7 @@ package com.solid.todolistapp.view.fragments
 
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
@@ -52,9 +53,12 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         }else{
             if (email == userEmail && password == userPassword){
                 Toast.makeText(requireContext(), "Login successful", Toast.LENGTH_SHORT).show()
+                val editor: SharedPreferences.Editor =  sharedPref.edit()
+                editor.putBoolean(LOGGED, true)
+                editor.apply()
+
                 val intent = Intent(requireContext(), MainActivity::class.java)
                 intent.putExtra("fullName", sharedPref.getString("fullName", ""))
-
                 startActivity(intent)
             }
         }
