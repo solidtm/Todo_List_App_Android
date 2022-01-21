@@ -12,8 +12,8 @@ import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.solid.todolistapp.R
 import com.solid.todolistapp.databinding.FragmentRegisterBinding
-import com.solid.todolistapp.viewmodel.UserViewModel
 import com.solid.todolistapp.model.data.User
+import com.solid.todolistapp.viewmodel.UserViewModel
 
 class RegisterFragment : Fragment(R.layout.fragment_register) {
 

@@ -10,6 +10,8 @@ import com.solid.todolistapp.R
 import com.solid.todolistapp.databinding.FragmentHomeBinding
 import com.solid.todolistapp.viewmodel.TodoViewModel
 import com.solid.todolistapp.view.activities.todo.adapter.TodoAdapter
+import java.text.SimpleDateFormat
+import java.util.*
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
@@ -38,6 +40,11 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
 
         binding.greetText.text = String.format("%s", "Hello, $name")
+
+        val date = Calendar.getInstance().time
+        val formatter = SimpleDateFormat.getDateInstance()
+        val formattedDate = formatter.format(date)
+        binding.dateText.text = String.format("%s %s", "Today, ", formattedDate)
     }
 
     override fun onDestroyView() {
