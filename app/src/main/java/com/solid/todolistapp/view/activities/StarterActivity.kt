@@ -35,7 +35,7 @@ class StarterActivity : AppCompatActivity() {
 
             val navGraph = navController.navInflater.inflate(R.navigation.starter)
 
-            navGraph.startDestination = R.id.navigation_login
+            navGraph.setStartDestination(R.id.navigation_login)
             navController.graph = navGraph
         }
 

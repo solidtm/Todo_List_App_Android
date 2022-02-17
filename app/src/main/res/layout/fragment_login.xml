@@ -133,15 +133,16 @@
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="24dp"
                     android:text="@string/don_t_have_an_account"
-                    android:textFontWeight="700"
                     android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/textView_register"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
                     android:text="@string/register"
                     android:textColor="@color/primaryDarkColor"
                     android:textSize="14sp"
@@ -156,7 +157,6 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="104dp"
                 android:text="@string/email_address"
-                android:textFontWeight="700"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/label_register" />
@@ -168,7 +168,6 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="95dp"
                 android:text="@string/password"
-                android:textFontWeight="700"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/label_name" />
