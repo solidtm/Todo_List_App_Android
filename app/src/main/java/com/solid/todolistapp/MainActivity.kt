@@ -1,24 +1,18 @@
 package com.solid.todolistapp
 
-import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.widget.Toast
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.solid.todolistapp.databinding.ActivityMainBinding
 import com.solid.todolistapp.view.activities.todo.NewTodoActivity
-import com.solid.todolistapp.view.fragments.CalendarFragment
-import com.solid.todolistapp.view.fragments.HomeFragment
-import com.solid.todolistapp.view.fragments.NotificationsFragment
 
 class MainActivity : AppCompatActivity() {
 

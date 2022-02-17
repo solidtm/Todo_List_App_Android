@@ -2,7 +2,6 @@ package com.solid.todolistapp.view.fragments
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -27,10 +26,10 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         binding.todoListRv.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         binding.todoListRv.adapter = todoAdapter
 
-        todoViewModel = ViewModelProvider(this).get(TodoViewModel::class.java)
-        todoViewModel.readAllData.observe(viewLifecycleOwner, { todo ->
+        todoViewModel = ViewModelProvider(this)[TodoViewModel::class.java]
+        todoViewModel.readAllData.observe(viewLifecycleOwner) { todo ->
             todoAdapter.setData(todo)
-        })
+        }
 
 //        get the fullName from intent
         val fullName = activity?.intent?.getStringExtra("fullName")

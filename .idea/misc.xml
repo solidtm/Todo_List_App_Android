@@ -38,6 +38,9 @@
         <entry key="..\:/Users/Lordsolid/AndroidStudioProjects/TodoListApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2" />
         <entry key="..\:/Users/Lordsolid/AndroidStudioProjects/TodoListApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/Lordsolid/AndroidStudioProjects/TodoListApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2484375" />
+        <entry key="app/src/main/res/layout/activity_starter.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/fragment_register.xml" value="0.25" />
       </map>
     </option>
   </component>

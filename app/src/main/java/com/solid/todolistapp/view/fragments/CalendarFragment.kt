@@ -20,7 +20,7 @@ class CalendarFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         _binding = FragmentCalendarBinding.bind(view)
 
-        todoViewModel = ViewModelProvider(this).get(TodoViewModel::class.java)
+        todoViewModel = ViewModelProvider(this)[TodoViewModel::class.java]
 
         binding.taskName.setText(args.currentTodo.taskName)
         binding.categoryText.text = args.currentTodo.category
