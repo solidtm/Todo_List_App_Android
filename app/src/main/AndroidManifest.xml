@@ -10,12 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Fab_Bottom_app_bar">
         <activity
-            android:name="com.solid.todolistapp.view.activities.StarterActivity"
+            android:name="com.solid.todolistapp.StarterActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize"
             android:noHistory="true"/>
         <activity
-            android:name="com.solid.todolistapp.view.activities.SplashActivity"
+            android:name="com.solid.todolistapp.SplashActivity"
             android:exported="true"
             android:theme="@style/Theme.Fab_Bottom_app_bar.NoActionBar">
             <intent-filter>
@@ -25,7 +25,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.solid.todolistapp.view.activities.todo.NewTodoActivity"
+            android:name="com.solid.todolistapp.features.task.NewTodoActivity"
             android:exported="true" />
         <activity
             android:name="com.solid.todolistapp.MainActivity"

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.solid.todolistapp.view.fragments.HomeFragment"
+        android:name="com.solid.todolistapp.features.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -20,25 +20,25 @@
 
     <fragment
         android:id="@+id/navigation_calendar"
-        android:name="com.solid.todolistapp.view.fragments.CalendarFragment"
+        android:name="com.solid.todolistapp.features.calendar.CalendarFragment"
         android:label="@string/title_calendar"
         tools:layout="@layout/fragment_calendar" >
-        <argument
-            android:name="currentTodo"
-            app:argType="com.solid.todolistapp.model.data.Todo" />
         <action
             android:id="@+id/action_navigation_calendar_to_navigation_home"
             app:destination="@id/navigation_home" />
+        <argument
+            android:name="currentItem"
+            app:argType="com.solid.todolistapp.data.model.Todo" />
     </fragment>
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.solid.todolistapp.view.fragments.NotificationsFragment"
+        android:name="com.solid.todolistapp.features.alarm.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
 
     <activity android:id="@+id/navigation_todo"
-        android:name="com.solid.todolistapp.view.activities.todo.NewTodoActivity"
+        android:name="com.solid.todolistapp.features.task.NewTodoActivity"
         android:label="Add Todo"
         tools:layout="@layout/new_todo_activity"/>
 </navigation>

@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/navigation_register"
-        android:name="com.solid.todolistapp.view.fragments.RegisterFragment"
+        android:name="com.solid.todolistapp.features.register.RegisterFragment"
         tools:layout="@layout/fragment_register"
         android:label="@string/title_register" >
         <action
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/navigation_login"
-        android:name="com.solid.todolistapp.view.fragments.LoginFragment"
+        android:name="com.solid.todolistapp.features.login.LoginFragment"
         tools:layout="@layout/fragment_login"
         android:label="@string/login" >
         <action

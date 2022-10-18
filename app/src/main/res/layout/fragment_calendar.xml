@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.fragments.CalendarFragment">
+    tools:context=".features.calendar.CalendarFragment">
 
     <TextView
         android:id="@+id/greet_text"

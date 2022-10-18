@@ -12,7 +12,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.solid.todolistapp.databinding.ActivityMainBinding
-import com.solid.todolistapp.view.activities.todo.NewTodoActivity
+import com.solid.todolistapp.features.task.NewTodoActivity
 
 class MainActivity : AppCompatActivity() {
 
