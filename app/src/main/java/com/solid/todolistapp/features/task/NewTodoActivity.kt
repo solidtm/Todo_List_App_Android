@@ -2,11 +2,14 @@ package com.solid.todolistapp.features.task
 
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
+import android.content.ContentValues.TAG
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import com.solid.todolistapp.R
 import com.solid.todolistapp.databinding.NewTodoActivityBinding
@@ -22,6 +25,8 @@ class NewTodoActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var category: String
     private var priorityColor: Int = 0
     private var categoryColor: Int = 0
+    private var activePriorityBtn: String = ""   //for detecting and changing priority active button
+    private var activeCategoryBtn: String = ""  //for detecting and changing category active button
 
 
 
@@ -88,26 +93,111 @@ class NewTodoActivity : AppCompatActivity(), View.OnClickListener {
             R.id.low_button -> {
                 priority = binding.lowButton.text.toString()
                 priorityColor = R.color.checked
+                activePriorityBtn = "low_button"
             }
             R.id.medium_button -> {
                 priority = binding.mediumButton.text.toString()
                 priorityColor = R.color.category
+                activePriorityBtn = "medium_button"
             }
             R.id.high_button -> {
                 priority = binding.highButton.text.toString()
                 priorityColor = R.color.category_color
+                activePriorityBtn = "high_button"
             }
             R.id.work_button -> {
                 category = binding.workButton.text.toString()
                 categoryColor = R.color.category
+                activeCategoryBtn = "work_button"
             }
             R.id.family_button -> {
                 category = binding.familyButton.text.toString()
                 categoryColor = R.color.family_background
+                activeCategoryBtn = "family_button"
             }
             R.id.school_button -> {
                 category = binding.schoolButton.text.toString()
                 categoryColor = R.color.school
+                activeCategoryBtn = "school_button"
+            }
+        }
+        changeActiveBtnColor()
+    }
+
+    private fun changeActiveBtnColor(){
+        when (activePriorityBtn) {
+            "low_button" -> {
+                binding.lowButton.setTextColor(ContextCompat.getColor(this, R.color.white))
+                binding.lowButton.setBackgroundColor(ContextCompat.getColor(this, R.color.secondary_color))
+
+                binding.mediumButton.setTextColor(ContextCompat.getColor(this, R.color.black))
+                binding.mediumButton.setBackgroundColor(ContextCompat.getColor(this, R.color.white))
+
+                binding.highButton.setTextColor(ContextCompat.getColor(this, R.color.category_color))
+                binding.highButton.setBackgroundColor(ContextCompat.getColor(this, R.color.white))
+
+            }
+            "medium_button" -> {
+                binding.mediumButton.setBackgroundColor(ContextCompat.getColor(this, R.color.primaryDarkColor))
+                binding.mediumButton.setTextColor(ContextCompat.getColor(this, R.color.white))
+
+                binding.lowButton.setTextColor(ContextCompat.getColor(this, R.color.secondary_dark_color))
+                binding.lowButton.setBackgroundColor(ContextCompat.getColor(this, R.color.white))
+
+                binding.highButton.setTextColor(ContextCompat.getColor(this, R.color.category_color))
+                binding.highButton.setBackgroundColor(ContextCompat.getColor(this, R.color.white))
+            }
+            "high_button" -> {
+                binding.mediumButton.setTextColor(ContextCompat.getColor(this, R.color.black))
+                binding.mediumButton.setBackgroundColor(ContextCompat.getColor(this, R.color.white))
+
+                binding.lowButton.setTextColor(ContextCompat.getColor(this, R.color.secondary_dark_color))
+                binding.lowButton.setBackgroundColor(ContextCompat.getColor(this, R.color.white))
+
+                binding.highButton.setTextColor(ContextCompat.getColor(this, R.color.white))
+                binding.highButton.setBackgroundColor(ContextCompat.getColor(this, R.color.category_color))
+            }
+        }
+
+        when (activeCategoryBtn) {
+            "work_button" -> {
+                binding.workButton.setStrokeColorResource(R.color.primaryDarkColor)
+                binding.workButton.setTextColor(ContextCompat.getColor(this, R.color.primaryDarkColor))
+                binding.workButton.setBackgroundColor(ContextCompat.getColor(this, R.color.white))
+
+                binding.familyButton.setStrokeColorResource(R.color.white)
+                binding.familyButton.setTextColor(ContextCompat.getColor(this, R.color.family))
+                binding.familyButton.setBackgroundColor(ContextCompat.getColor(this, R.color.family_background))
+
+                binding.schoolButton.setStrokeColorResource(R.color.white)
+                binding.schoolButton.setTextColor(ContextCompat.getColor(this, R.color.school_text))
+                binding.schoolButton.setBackgroundColor(ContextCompat.getColor(this, R.color.school))
+            }
+            "family_button" -> {
+                binding.familyButton.setStrokeColorResource(R.color.family)
+                binding.familyButton.setTextColor(ContextCompat.getColor(this, R.color.family))
+                binding.familyButton.setBackgroundColor(ContextCompat.getColor(this, R.color.white))
+
+                binding.workButton.setStrokeColorResource(R.color.white)
+                binding.workButton.setTextColor(ContextCompat.getColor(this, R.color.primaryDarkColor))
+                binding.workButton.setBackgroundColor(ContextCompat.getColor(this, R.color.primaryColor))
+
+                binding.schoolButton.setStrokeColorResource(R.color.white)
+                binding.schoolButton.setTextColor(ContextCompat.getColor(this, R.color.school_text))
+                binding.schoolButton.setBackgroundColor(ContextCompat.getColor(this, R.color.school))
+            }
+            "school_button" -> {
+                binding.schoolButton.setStrokeColorResource(R.color.school_text)
+                binding.schoolButton.setTextColor(ContextCompat.getColor(this, R.color.school_text))
+                binding.schoolButton.setBackgroundColor(ContextCompat.getColor(this, R.color.white))
+
+                binding.familyButton.setStrokeColorResource(R.color.white)
+                binding.familyButton.setTextColor(ContextCompat.getColor(this, R.color.family))
+                binding.familyButton.setBackgroundColor(ContextCompat.getColor(this, R.color.family_background))
+
+                binding.workButton.setStrokeColorResource(R.color.white)
+                binding.workButton.setTextColor(ContextCompat.getColor(this, R.color.primaryDarkColor))
+                binding.workButton.setBackgroundColor(ContextCompat.getColor(this, R.color.primaryColor))
             }
         }
     }
