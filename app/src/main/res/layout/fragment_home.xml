@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="24dp"
     tools:context=".features.home.HomeFragment">
 
 
@@ -11,15 +12,11 @@
         android:id="@+id/date_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
         android:gravity="center|center_horizontal|center_vertical"
         android:text="@string/time_textview_string"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/todo_list_rv"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.177"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/greeting_text2" />
 
@@ -30,7 +27,7 @@
         android:layout_marginTop="4dp"
         android:gravity="center|center_horizontal|center_vertical"
         android:text="@string/let_s_be_productive_today"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -41,38 +38,23 @@
         android:id="@+id/greet_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="24dp"
         android:gravity="center"
         android:text="@string/greetings_text"
         android:textColor="@color/grey"
-        android:textSize="34sp"
+        android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/greeting_text2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/menu_img_view" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/todo_list_rv"
-        android:layout_width="match_parent"
-        android:layout_height="515dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginBottom="60dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/date_text"
-        tools:listitem="@layout/todo_list_rv_content"
-        tools:visibility="visible" />
-
     <ImageView
         android:id="@+id/menu_img_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="34dp"
+        android:layout_height="35dp"
         android:layout_gravity="end"
-        android:layout_marginEnd="16dp"
         android:layout_weight="1"
         android:src="@drawable/ic_baseline_search_24"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,16 +62,25 @@
 
     <ImageView
         android:id="@+id/back_img_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="28dp"
+        android:layout_height="30dp"
         android:layout_gravity="start"
-        android:layout_marginStart="8dp"
         android:layout_weight="1"
         android:src="@drawable/ic_profile"
-        app:layout_constraintBottom_toTopOf="@+id/greet_text"
-        app:layout_constraintEnd_toStartOf="@+id/menu_img_view"
-        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintBottom_toBottomOf="@+id/menu_img_view"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/menu_img_view" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/todo_list_rv"
+        android:layout_width="match_parent"
+        android:layout_height="515dp"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/date_text"
+        app:layout_constraintTop_toBottomOf="@+id/date_text"
+        tools:listitem="@layout/todo_list_rv_content"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
