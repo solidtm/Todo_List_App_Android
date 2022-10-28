@@ -49,8 +49,9 @@
         <entry key="app/src/main/res/layout/activity_starter.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_calendar.xml" value="0.28020833333333334" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.28020833333333334" />
-        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.2796875" />
         <entry key="app/src/main/res/layout/fragment_register.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/new_todo_activity.xml" value="0.2753846153846154" />
         <entry key="app/src/main/res/layout/todo_list_rv_content.xml" value="0.28020833333333334" />
       </map>
     </option>
