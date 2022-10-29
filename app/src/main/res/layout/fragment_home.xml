@@ -74,7 +74,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/todo_list_rv"
         android:layout_width="match_parent"
-        android:layout_height="515dp"
+        android:layout_height="450dp"
         android:layout_marginTop="24dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
