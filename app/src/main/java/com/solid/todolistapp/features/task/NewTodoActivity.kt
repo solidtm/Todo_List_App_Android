@@ -26,8 +26,6 @@ class NewTodoActivity : AppCompatActivity() {
     private lateinit var category: String
     private var priorityColor: Int = 0
     private var categoryColor: Int = 0
-    private var activePriorityBtn: String = ""   //for detecting and changing priority active button
-    private var activeCategoryBtn: String = ""  //for detecting and changing category active button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -92,26 +90,91 @@ class NewTodoActivity : AppCompatActivity() {
 //        Setting the clickListener for the priority and category buttons
 
         binding.lowButton.setOnClickListener {
+            binding.lowButton.invert(
+                true,
+                R.color.white,
+                R.color.secondary_dark_color,
+                R.color.secondary_dark_color,
+                R.color.white
+            )
+
+            binding.mediumButton.invert(
+                false,
+                R.color.white,
+                R.color.black,
+                R.color.primaryDarkColor,
+                R.color.white
+            )
+
+            binding.highButton.invert(
+                false,
+                R.color.white,
+                R.color.category_color,
+                R.color.category_color,
+                R.color.white
+            )
+
             priority = binding.lowButton.text.toString()
             priorityColor = R.color.checked
-            activePriorityBtn = "low_button"
-            changeActiveBtnColor()
         }
 
         binding.mediumButton.setOnClickListener {
+            binding.lowButton.invert(
+                false,
+                R.color.white,
+                R.color.secondary_dark_color,
+                R.color.secondary_dark_color,
+                R.color.white
+            )
+
+            binding.mediumButton.invert(
+                true,
+                R.color.white,
+                R.color.black,
+                R.color.primaryDarkColor,
+                R.color.white
+            )
+
+            binding.highButton.invert(
+                false,
+                R.color.white,
+                R.color.category_color,
+                R.color.category_color,
+                R.color.white
+            )
+
             priority = binding.mediumButton.text.toString()
             priorityColor = R.color.category
-            activePriorityBtn = "medium_button"
-            changeActiveBtnColor()
         }
 
         binding.highButton.setOnClickListener {
+            binding.lowButton.invert(
+                false,
+                R.color.white,
+                R.color.secondary_dark_color,
+                R.color.secondary_dark_color,
+                R.color.white
+            )
+
+            binding.mediumButton.invert(
+                false,
+                R.color.white,
+                R.color.black,
+                R.color.primaryDarkColor,
+                R.color.white
+            )
+
+            binding.highButton.invert(
+                true,
+                R.color.white,
+                R.color.category_color,
+                R.color.category_color,
+                R.color.white
+            )
+
             priority = binding.highButton.text.toString()
             priorityColor = R.color.category_color
-            activePriorityBtn = "high_button"
-            changeActiveBtnColor()
         }
-
 
         binding.workButton.setOnClickListener {
             binding.workButton.invert(
@@ -140,7 +203,6 @@ class NewTodoActivity : AppCompatActivity() {
 
             category = binding.workButton.text.toString()
             categoryColor = R.color.category
-            activeCategoryBtn = "work_button"
         }
 
         binding.familyButton.setOnClickListener {
@@ -169,7 +231,6 @@ class NewTodoActivity : AppCompatActivity() {
             )
             category = binding.familyButton.text.toString()
             categoryColor = R.color.family_background
-            activeCategoryBtn = "family_button"
         }
 
         binding.schoolButton.setOnClickListener {
@@ -198,46 +259,6 @@ class NewTodoActivity : AppCompatActivity() {
             )
             category = binding.schoolButton.text.toString()
             categoryColor = R.color.school
-            activeCategoryBtn = "school_button"
-        }
-    }
-
-    private fun changeActiveBtnColor() {
-        when (activePriorityBtn) {
-            "low_button" -> {
-                binding.lowButton.lowBtnSelected(binding.lowButton)
-                binding.mediumButton.mediumBtnDefault(binding.mediumButton)
-                binding.highButton.highBtnDefault(binding.highButton)
-
-            }
-            "medium_button" -> {
-                binding.mediumButton.mediumBtnSelected(binding.mediumButton)
-//                binding.lowButton.lowBtnDefault(binding.lowButton)
-                binding.highButton.highBtnDefault(binding.highButton)
-            }
-            "high_button" -> {
-                binding.mediumButton.mediumBtnDefault(binding.mediumButton)
-//                binding.lowButton.lowBtnDefault(binding.lowButton)
-                binding.highButton.highBtnSelected(binding.highButton)
-            }
-        }
-
-        when (activeCategoryBtn) {
-            "work_button" -> {
-                binding.workButton.workBtnSelected(binding.workButton)
-                binding.familyButton.familyButtonDefault(binding.familyButton)
-                binding.schoolButton.schoolButtonDefault(binding.schoolButton)
-            }
-            "family_button" -> {
-                binding.familyButton.familyButtonSelected(binding.familyButton)
-                binding.workButton.workBtnDefault(binding.workButton)
-                binding.schoolButton.schoolButtonDefault(binding.schoolButton)
-            }
-            "school_button" -> {
-                binding.schoolButton.schoolButtonSelected(binding.schoolButton)
-                binding.familyButton.familyButtonDefault(binding.familyButton)
-                binding.workButton.workBtnDefault(binding.workButton)
-            }
         }
     }
 
@@ -276,82 +297,6 @@ class NewTodoActivity : AppCompatActivity() {
 }
 
 
-//Extension functions
-fun Button.lowBtnDefault(isClicked: Boolean) {
-    if (isClicked) {
-        this.setTextColor(ContextCompat.getColor(context, R.color.white))
-        setBackgroundColor(ContextCompat.getColor(context, R.color.secondary_color))
-    } else {
-        this.setTextColor(ContextCompat.getColor(context, R.color.secondary_dark_color))
-        setBackgroundColor(ContextCompat.getColor(context, R.color.white))
-    }
-}
 
 
-
-private fun View.lowBtnSelected(textView: TextView) {
-    textView.setTextColor(ContextCompat.getColor(context, R.color.white))
-    setBackgroundColor(ContextCompat.getColor(context, R.color.secondary_color))
-}
-
-private fun View.mediumBtnDefault(textView: TextView) {
-    textView.setTextColor(ContextCompat.getColor(context, R.color.black))
-    setBackgroundColor(ContextCompat.getColor(context, R.color.white))
-}
-
-private fun View.mediumBtnSelected(textView: TextView) {
-    setBackgroundColor(ContextCompat.getColor(context, R.color.primaryDarkColor))
-    textView.setTextColor(ContextCompat.getColor(context, R.color.white))
-}
-
-private fun View.highBtnDefault(textView: TextView) {
-    textView.setTextColor(ContextCompat.getColor(context, R.color.category_color))
-    setBackgroundColor(ContextCompat.getColor(context, R.color.white))
-}
-
-private fun View.highBtnSelected(textView: TextView) {
-    textView.setTextColor(ContextCompat.getColor(context, R.color.white))
-    setBackgroundColor(ContextCompat.getColor(context, R.color.category_color))
-}
-
-
-private fun View.workBtnDefault(textView: TextView) {
-    textView.setTextColor(ContextCompat.getColor(context, R.color.primaryDarkColor))
-    setBackgroundColor(ContextCompat.getColor(context, R.color.primaryColor))
-    //setStrokeWidthResource(R.dimen.no_stroke)
-}
-
-private fun View.workBtnSelected(textView: TextView) {
-    textView.setTextColor(ContextCompat.getColor(context, R.color.primaryDarkColor))
-    setBackgroundColor(ContextCompat.getColor(context, R.color.white))
-    //setStrokeColorResource(R.color.primaryDarkColor)
-    //setStrokeWidthResource(R.dimen.btn_stroke)
-}
-
-private fun View.familyButtonDefault(textView: TextView) {
-    textView.setTextColor(ContextCompat.getColor(context, R.color.family))
-    setBackgroundColor(ContextCompat.getColor(context, R.color.family_background))
-    //setStrokeWidthResource(R.dimen.no_stroke)
-}
-
-private fun View.familyButtonSelected(textView: TextView) {
-    textView.setTextColor(ContextCompat.getColor(context, R.color.family))
-    setBackgroundColor(ContextCompat.getColor(context, R.color.white))
-    //binding.familyButton.setStrokeColorResource(R.color.family)
-    //binding.familyButton.setStrokeWidthResource(R.dimen.btn_stroke)
-}
-
-private fun View.schoolButtonDefault(textView: TextView) {
-    textView.setTextColor(ContextCompat.getColor(context, R.color.school_text))
-    setBackgroundColor(ContextCompat.getColor(context, R.color.school))
-    //setStrokeWidthResource(R.dimen.no_stroke)
-}
-
-private fun View.schoolButtonSelected(textView: TextView) {
-    textView.setTextColor(ContextCompat.getColor(context, R.color.school_text))
-    setBackgroundColor(ContextCompat.getColor(context, R.color.white))
-    //binding.schoolButton.setStrokeColorResource(R.color.school_text)
-    //binding.schoolButton.setStrokeWidthResource(R.dimen.btn_stroke)
-
-}
 

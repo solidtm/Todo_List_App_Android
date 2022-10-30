@@ -196,9 +196,9 @@
                 app:cornerRadius="7dp"
                 app:layout_constraintBottom_toBottomOf="@+id/low_button"
                 app:layout_constraintEnd_toStartOf="@+id/high_button"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/low_button"
                 app:layout_constraintTop_toTopOf="@+id/low_button"
+                app:layout_constraintVertical_bias="0.0"
                 app:strokeColor="@color/category" />
 
             <com.google.android.material.button.MaterialButton
@@ -230,8 +230,6 @@
                 app:cornerRadius="7dp"
                 app:layout_constraintBottom_toBottomOf="@+id/medium_button"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/medium_button"
                 app:layout_constraintTop_toTopOf="@+id/medium_button"
                 app:layout_constraintVertical_bias="0.0"
                 app:strokeColor="@color/priority" />
@@ -275,7 +273,6 @@
                 app:cornerRadius="7dp"
                 app:layout_constraintBottom_toBottomOf="@+id/work_button"
                 app:layout_constraintEnd_toStartOf="@+id/school_button"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/work_button"
                 app:layout_constraintTop_toTopOf="@+id/work_button"
                 app:layout_constraintVertical_bias="1.0"
@@ -293,8 +290,6 @@
                 app:cornerRadius="7dp"
                 app:layout_constraintBottom_toBottomOf="@+id/family_button"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/family_button"
                 app:layout_constraintTop_toTopOf="@+id/family_button"
                 app:layout_constraintVertical_bias="1.0"
                 app:strokeColor="@color/priority" />
