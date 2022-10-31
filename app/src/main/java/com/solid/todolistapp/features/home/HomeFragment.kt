@@ -33,10 +33,12 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
 //        get the fullName from intent
         val fullName = activity?.intent?.getStringExtra("fullName")
+        println("fullName = $fullName")
         var name = ""
         if (fullName != null){
             name = fullName.substring(0, fullName.indexOf(" ") + 1)
         }
+        println("name = $name")
 
         binding.greetText.text = String.format("%s", "Hello, $name")
 

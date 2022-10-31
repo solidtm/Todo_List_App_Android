@@ -8,40 +8,10 @@
 
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/priorityCardView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end|top"
-        android:translationX="320dp"
-        android:translationY="20dp"
-        app:cardCornerRadius="5dp"
-        app:cardElevation="5dp"
-        app:layout_anchor="@+id/content_cardview"
-        app:layout_anchorGravity="start|top">
-
-        <TextView
-            android:id="@+id/priority"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
-            android:text="@string/priority_string"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            tools:layout_editor_absoluteX="7dp"
-            tools:layout_editor_absoluteY="7dp" />
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
         android:id="@+id/content_cardview"
         android:layout_width="match_parent"
-        android:layout_height="131dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="8dp"
+        android:layout_height="130dp"
+        android:layout_margin="8dp"
         app:cardCornerRadius="15dp"
         app:cardElevation="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -61,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
                 android:text="@string/time_stamp_text"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -90,12 +60,38 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/priorityCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|top"
+        android:translationX="280dp"
+        android:translationY="20dp"
+        app:cardCornerRadius="5dp"
+        app:layout_anchor="@+id/content_cardview"
+        app:cardElevation="5dp">
+
+        <TextView
+            android:id="@+id/priority"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:text="@string/priority_string"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="7dp"
+            tools:layout_editor_absoluteY="7dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
         android:id="@+id/categoryCardView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start|top"
         android:translationX="32dp"
-        android:translationY="5dp"
+        android:translationY="2dp"
         app:cardCornerRadius="5dp"
         app:cardElevation="5dp"
         app:layout_anchor="@+id/content_cardview"

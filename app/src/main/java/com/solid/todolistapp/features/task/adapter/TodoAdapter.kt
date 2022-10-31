@@ -3,6 +3,7 @@ package com.solid.todolistapp.features.task.adapter
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.solid.todolistapp.R
@@ -52,25 +53,9 @@ class TodoAdapter: RecyclerView.Adapter<TodoAdapter.TodoViewHolder>() {
 
                 val priorityCardColor = todo.priorityCardColor
                 val categoryCardColor = todo.categoryCardColor
-                if(priorityCardColor == R.color.checked){
-                    binding.priorityCardView.setCardBackgroundColor(Color.parseColor("#16DB65"))
-                }
-                if (priorityCardColor == R.color.category){
-                    binding.priorityCardView.setCardBackgroundColor(Color.parseColor("#ffda85"))
-                }
-                if (priorityCardColor == R.color.category_color){
-                    binding.priorityCardView.setCardBackgroundColor(Color.parseColor("#ba1b1d"))
-                }
 
-                if (categoryCardColor == R.color.category){
-                    binding.categoryCardView.setCardBackgroundColor(Color.parseColor("#ffda85"))
-                }
-                if (categoryCardColor == R.color.family_background){
-                    binding.categoryCardView.setCardBackgroundColor(Color.parseColor("#ade8f4"))
-                }
-                if (categoryCardColor == R.color.school){
-                    binding.categoryCardView.setCardBackgroundColor(Color.parseColor("#ffa7c5"))
-                }
+                binding.priorityCardView.setCardBackgroundColor(ContextCompat.getColor(binding.priorityCardView.context, priorityCardColor))
+                binding.categoryCardView.setCardBackgroundColor(ContextCompat.getColor(binding.categoryCardView.context, categoryCardColor))
             }
     }
 }

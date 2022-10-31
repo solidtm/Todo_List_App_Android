@@ -21,7 +21,6 @@ class NewTodoActivity : AppCompatActivity() {
     private lateinit var todoViewModel: TodoViewModel
     private lateinit var timePicker: TimePickerDialog
     private lateinit var datePicker: DatePickerDialog
-    private var workButtonClicked = false
     private lateinit var priority: String
     private lateinit var category: String
     private var priorityColor: Int = 0
